@@ -1,7 +1,7 @@
 #!/bin/bash
 
 filename=$1
-echo "#ifdef __APPLE__
+echo '#ifdef __APPLE__
 #include <iostream>
 #include <vector>
 #include <utility>
@@ -13,26 +13,35 @@ echo "#ifdef __APPLE__
 #include <unordered_map>
 #include <unordered_set>
 #include <random>
+#include <iomanip>
+#include <cmath>
+#include <ctgmath>
+#include <math.h>
+#include <cassert>
+#include <chrono>
 #else
 #include <bits/stdc++.h>
 #endif
 
 using namespace std;
-#define rep(i,a,n) for (int i=a;i<n;i++)
-#define per(i,a,n) for (int i=n-1;i>=a;i--)
+#define io ios_base::sync_with_stdio(false), cin.tie(NULL)
+#define GFOR(i,a,n) for (i=a;i<n;i++)
+#define FOR(i,a,n) for (int i=a;i<n;i++)
+#define RFOR(i,a,n) for (int i=n-1;i>=a;i--)
 #define pb push_back
 #define mp make_pair
 #define all(x) (x).begin(),(x).end()
 #define fi first
 #define se second
-#define SZ(x) ((int)(x).size())
+#define sz(x) ((int)(x).size())
 #define tc(t) for (int tc=1; tc<=t; tc++)
-typedef vector<int> VI;
-typedef vector<long long int> VLLI;
-typedef vector<pair<int, int> > VPI;
+typedef vector<int> vi;
+typedef vector<string> vs;
+typedef vector<long long int> vll;
+typedef vector<pair<int, int> > vpi;
 typedef long long ll;
-typedef pair<int,int> PII;
-typedef pair<ll, ll> PLL;
+typedef pair<int,int> pii;
+typedef pair<ll, ll> pll;
 mt19937 mrand(random_device{}()); 
 const ll mod=1000000007;
 int rnd(int x) { return mrand() % x;}
@@ -41,8 +50,30 @@ ll gcd(ll a,ll b) { return b?gcd(b,a%b):a;}
 ll modInverse (ll a) {ll p = mod - 2; return powmod(a, p);}
 // head
 
-int main() {
-    
+void solve() {
+
 }
-" >> $1
+
+int main() {
+    #ifdef LOCAL
+    auto t1 = std::chrono::high_resolution_clock::now();
+    #endif
+
+    io;
+    int t;
+    cin >> t;
+    tc(t) {
+        solve();
+    }
+
+    #ifdef LOCAL
+    auto t2 = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
+
+    std::cout << duration << "\n";
+    #endif
+
+}
+//check for edge cases in limits
+//printing double may print 1.223232e9 like values, beware of that' >> $1
 code .
