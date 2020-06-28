@@ -1,0 +1,12 @@
+{
+    "window.zoomLevel": 0,
+    "editor.fontSize": 14,
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
+    "terminal.integrated.lineHeight": 1.08,
+    "terminal.integrated.cursorBlinking": true,
+    "code-runner.executorMap": {
+        "cpp": "g++ -std=c++14 -Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -DLOCAL $fullFileName && ./a.out"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true
+}

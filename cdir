@@ -1,0 +1,11 @@
+#!/bin/bash
+mkdir $1 && cd $1 && mkdir .vscode && echo '{
+    "configurations": [
+        {
+            "name": "C++ Debug",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/a.out",
+        }
+    ]
+}' > .vscode/launch.json && code .
