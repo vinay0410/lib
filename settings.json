@@ -7,6 +7,7 @@
     "code-runner.executorMap": {
         "cpp": "g++ -std=c++14 -Wshadow -Wall -Wl,-stack_size -Wl,10000000 -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -DLOCAL $fullFileName && ./a.out"
     },
+    "code-runner.customCommand": "g++ -std=c++14 -Wshadow -Wall -Wl,-stack_size -Wl,10000000 -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -DLOCAL $fullFileName",
     "code-runner.runInTerminal": true,
     "code-runner.saveFileBeforeRun": true,
     "workbench.colorTheme": "Monokai",
@@ -33,6 +34,18 @@
             "commands": [
                 "workbench.action.files.save"
             ]
+        },
+        {
+            "before": ["leader", "t"],
+            "commands": ["workbench.action.terminal.toggleTerminal"]
+        },
+        {
+            "before": ["leader", "r"],
+            "commands": ["code-runner.run"]
+        },
+        {
+            "before": ["leader", "c"],
+            "commands": ["code-runner.runCustomCommand"]
         }
     ],
     "vim.leader": "<space>"
