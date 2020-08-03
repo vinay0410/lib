@@ -5,8 +5,35 @@
     "terminal.integrated.lineHeight": 1.08,
     "terminal.integrated.cursorBlinking": true,
     "code-runner.executorMap": {
-        "cpp": "g++ -std=c++14 -Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -DLOCAL $fullFileName && ./a.out"
+        "cpp": "g++ -std=c++14 -Wshadow -Wall -Wl,-stack_size -Wl,10000000 -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -DLOCAL $fullFileName && ./a.out"
     },
     "code-runner.runInTerminal": true,
-    "code-runner.saveFileBeforeRun": true
+    "code-runner.saveFileBeforeRun": true,
+    "workbench.colorTheme": "Monokai",
+    "vim.insertModeKeyBindings": [
+        {
+          "before": [";", ";"],
+          "after": ["<Esc>"]
+        }
+    ],
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before":["<CR>"],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        {
+            "before": [";"],
+            "after": ["/"]
+        },
+        {
+            "before": ["leader", "w"],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        }
+    ],
+    "vim.leader": "<space>"
 }
