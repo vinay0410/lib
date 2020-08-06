@@ -13,10 +13,11 @@
     "workbench.colorTheme": "Monokai",
     "vim.insertModeKeyBindings": [
         {
-          "before": [";", ";"],
+          "before": [";", "j"],
           "after": ["<Esc>"]
         }
     ],
+    "keyboard.dispatch": "keyCode",
     "vim.hlsearch": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -26,8 +27,16 @@
             ]
         },
         {
-            "before": [";"],
-            "after": ["/"]
+            "before":["leader", "y"],
+            "after": ["\"", "+", "y"]
+        },
+        {
+            "before":["leader", "p"],
+            "after": ["\"", "+", "p"]
+        },
+        {
+            "before": [";", "j"],
+            "after": ["<Esc>"]
         },
         {
             "before": ["leader", "w"],
@@ -46,6 +55,18 @@
         {
             "before": ["leader", "c"],
             "commands": ["code-runner.runCustomCommand"]
+        },
+        {
+            "before" : ["u"],
+            "commands" : [
+                "undo"
+            ]
+        },
+        {
+            "before" : ["<C-r>"],
+            "commands" : [
+                "redo"
+            ]
         }
     ],
     "vim.leader": "<space>"
