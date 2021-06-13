@@ -77,5 +77,6 @@ int main() {
 // check for edge cases in limits
 // printing double may print 1.223232e9 like values, beware of that
 // carefully observe simulation of test cases
-// multiset erase is does not do what it is supposed to' >> $1
+// multiset erase is does not do what it is supposed to
+// flooring vs typecasting to long, may give different values for negative numbers' >> $1
 code .
